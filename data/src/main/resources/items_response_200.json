@@ -1,0 +1,27 @@
+{
+  "total_count": 572234,
+  "items": [
+    {
+      "id": 51148780,
+      "name": "architecture-samples",
+      "stargazers_count": 38978,
+      "forks_count": 10725,
+      "owner": {
+        "id": 32689599,
+        "avatar_url": "https://avatars.githubusercontent.com/u/32689599?v=4",
+        "login": "android"
+      }
+    },
+    {
+      "id": 7190986,
+      "name": "shadowsocks-android",
+      "stargazers_count": 31573,
+      "forks_count": 11449,
+      "owner": {
+        "id": 3006190,
+        "avatar_url": "https://avatars.githubusercontent.com/u/3006190?v=4",
+        "login": "shadowsocks"
+      }
+    }
+  ]
+}

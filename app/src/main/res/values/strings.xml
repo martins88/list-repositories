@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Github Repositories</string>
+
+    <string name="common_title_error">Ooops,</string>
+    <string name="common_ok">OK</string>
+    <string name="repository_internet_connection">Parece que seu celular não está conectado à internet nesse momento.</string>
+    <string name="repository_error_server">Parece que não foi possível acessar nossos servidores. Tente novamente!</string>
+    <string name="try_again">Tentar novamente</string>
+
+</resources>

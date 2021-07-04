@@ -1,0 +1,222 @@
+ext {
+
+    //Libraries
+    legacySupportV4 = "1.0.0"
+    appCompat = '1.0.2'
+    material = "1.0.0"
+    recyclerView = "1.0.0"
+    cardView = '1.0.0'
+    constraintLayout = '1.1.3'
+    multiDex = '2.0.0'
+    archLifeCycle = '2.0.0'
+    glide = '4.9.0'
+
+    dagger = '2.16'
+    archLifeCycle = '2.0.0'
+    timber = '4.6.0'
+    retrofit = '2.4.0'
+    retrofitCoroutines = '1.1.0'
+    okHttp = '3.10.0'
+    gson = '2.8.5'
+    simpleXml = '2.7.1'
+
+    //Testing
+    jUnit = '4.12'
+    mockito = '2.8.47'
+    mockk = '1.9.3'
+    coroutinesTest = '1.2.0-alpha-2'
+    androidTestVersion = '1.1.0'
+    mockwebserver = '3.9.1'
+    roboletric = '4.2'
+    espresso = '3.1.1'
+    espressoIntents = '3.1.1'
+    espressoIdling = "3.1.1"
+    androidxTruth = '1.1.0'
+    androidxJunit = '1.1.0'
+
+    // All Dependencies
+
+    allDependencies = [
+            //kotlin
+            kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            kotlinCoroutines        : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${kotlinCoroutinesVersion}",
+
+            //support libraries
+            supportV4               : "androidx.legacy:legacy-support-v4:${legacySupportV4}",
+            appCompatV7             : "androidx.appcompat:appcompat:${appCompat}",
+            material                : "com.google.android.material:material:${material}",
+            recyclerView            : "androidx.recyclerview:recyclerview:${recyclerView}",
+            cardView                : "androidx.cardview:cardview:${cardView}",
+            constraintLayout        : "androidx.constraintlayout:constraintlayout:${constraintLayout}",
+            multiDex                : "androidx.multidex:multidex:${multiDex}",
+
+            // glide
+            glide                   : "com.github.bumptech.glide:glide:${glide}",
+            glideCompiler           : "com.github.bumptech.glide:compiler:${glide}",
+
+            //dependency injection
+            dagger                  : "com.google.dagger:dagger:${dagger}",
+            daggerAndroid           : "com.google.dagger:dagger-android-support:${dagger}",
+            daggerCompiler          : "com.google.dagger:dagger-compiler:${dagger}",
+            daggerAndroidProcessor  : "com.google.dagger:dagger-android-processor:${dagger}",
+
+            //Architecture Components
+            //room                    : "androidx.room:room-runtime:${archRoom}",
+            //roomCompiler            : "androidx.room:room-compiler:${archRoom}",
+            lifeCycle               : "androidx.lifecycle:lifecycle-extensions:${archLifeCycle}",
+            lifeCycleCompiler       : "androidx.lifecycle:lifecycle-compiler:${archLifeCycle}",
+
+            //logging
+            timber                  : "com.jakewharton.timber:timber:${timber}",
+
+            //network
+            retrofit2               : "com.squareup.retrofit2:retrofit:${retrofit}",
+            retrofit2GsonConverter  : "com.squareup.retrofit2:converter-gson:${retrofit}",
+            retrofitCoroutines      : "ru.gildor.coroutines:kotlin-coroutines-retrofit:${retrofitCoroutines}",
+            okHttp3                 : "com.squareup.okhttp3:okhttp:${okHttp}",
+            okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttp}",
+
+            //parsing
+            gson                    : "com.google.code.gson:gson:${gson}",
+            simpleXml               : "org.simpleframework:simple-xml:${simpleXml}"
+    ]
+
+    allTestDependencies = [
+            junit          : "junit:junit:${jUnit}",
+            mockito        : "org.mockito:mockito-core:${mockito}",
+            mockk          : "io.mockk:mockk:${mockk}",
+            coroutinesCore : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${kotlinCoroutinesVersion}",
+            coroutinesTest : "org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutinesTest}",
+            archCoreTesting: "androidx.arch.core:core-testing:${archLifeCycle}",
+            androidTest    : "androidx.test:core:$androidTestVersion",
+            mockwebserver  : "com.squareup.okhttp3:mockwebserver:${mockwebserver}",
+            roboletric     : "org.robolectric:robolectric:$roboletric",
+    ]
+
+    allAndroidTestDependencies = [
+            espresso       : "androidx.test.espresso:espresso-core:${espresso}",
+            espressoContrib: "androidx.test.espresso:espresso-contrib:${espresso}",
+            espressoIntents: "androidx.test.espresso:espresso-intents:${espressoIntents}",
+            espressoIdling : "androidx.test.espresso:espresso-idling-resource:${espressoIdling}",
+            androidxJunit  : "androidx.test.ext:truth:${androidxTruth}",
+            androidxTruth  : "androidx.test.ext:junit:${androidxJunit}",
+    ]
+
+    // App Dependencies
+
+    appDependencies = [
+            allDependencies.kotlin,
+            allDependencies.kotlinCoroutines,
+
+            //support libraries
+            allDependencies.supportV4,
+            allDependencies.appCompatV7,
+            allDependencies.material,
+            allDependencies.recyclerView,
+            allDependencies.cardView,
+            allDependencies.constraintLayout,
+
+            //glide
+            allDependencies.glide,
+
+            //dependency injection
+            allDependencies.dagger,
+            allDependencies.daggerAndroid,
+
+            //AAC
+            allDependencies.lifeCycle,
+
+            //LOG
+            allDependencies.timber,
+
+            //network
+            allDependencies.okHttp3,
+            allDependencies.gson
+    ]
+
+    appKapt = [
+            allDependencies.daggerCompiler,
+            allDependencies.daggerAndroidProcessor,
+            allDependencies.lifeCycleCompiler,
+            allDependencies.glideCompiler
+    ]
+
+    appTestDependencies = [
+            allTestDependencies.junit,
+            allTestDependencies.mockito,
+            allTestDependencies.mockk,
+            allTestDependencies.coroutinesCore,
+            allTestDependencies.archCoreTesting
+    ]
+
+    appAndroidTestDependencies = [
+            allAndroidTestDependencies.espresso,
+            allAndroidTestDependencies.espressoContrib,
+            allAndroidTestDependencies.espressoIntents,
+            allAndroidTestDependencies.espressoIdling,
+            allAndroidTestDependencies.androidxJunit,
+            allAndroidTestDependencies.androidxTruth,
+            allTestDependencies.mockwebserver
+    ]
+
+    appAndroidKapt = [
+            allDependencies.daggerCompiler,
+            allDependencies.daggerAndroidProcessor,
+    ]
+
+    // Domain Dependencies
+
+    domainDependencies = [
+            allDependencies.kotlin,
+            allDependencies.kotlinCoroutines,
+            allDependencies.dagger,
+            allDependencies.daggerAndroid
+    ]
+
+    domainKapt = [
+            allDependencies.daggerCompiler,
+            allDependencies.daggerAndroidProcessor
+    ]
+
+    domainTestDependencies = [
+            allTestDependencies.junit,
+            allTestDependencies.mockito,
+            allTestDependencies.mockk,
+            allTestDependencies.coroutinesCore
+
+    ]
+
+    // Data Dependencies
+
+    dataDependencies = [
+            allDependencies.kotlin,
+            allDependencies.kotlinCoroutines,
+            allDependencies.dagger,
+            allDependencies.daggerAndroid,
+            allDependencies.lifeCycle,
+            allDependencies.retrofit2,
+            allDependencies.retrofitCoroutines,
+            allDependencies.okHttp3,
+            allDependencies.okHttpLoggingInterceptor,
+            allDependencies.gson,
+            allDependencies.timber
+    ]
+
+    dataKapt = [
+            allDependencies.daggerCompiler,
+            allDependencies.daggerAndroidProcessor,
+            allDependencies.lifeCycleCompiler
+    ]
+
+    dataTestDependencies = [
+            allTestDependencies.androidTest,
+            allTestDependencies.junit,
+            allTestDependencies.mockito,
+            allTestDependencies.mockk,
+            allTestDependencies.coroutinesCore,
+            allTestDependencies.mockwebserver,
+            allTestDependencies.archCoreTesting,
+            allTestDependencies.roboletric
+    ]
+
+}
